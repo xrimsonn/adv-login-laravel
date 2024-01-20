@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+article {
+  margin: 0;
+}
+
+form > button {
+  margin-top: 1rem;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-form {
+  text-align: center;
+  width: 40%;
+}
+
+/* Yellow Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #fdd835;
+  --primary-hover: #fbc02d;
+  --primary-focus: rgba(253, 216, 53, 0.125);
+  --primary-inverse: rgba(0, 0, 0, 0.75);
+}
+
+/* Yellow Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --primary: #fdd835;
+    --primary-hover: #ffeb3b;
+    --primary-focus: rgba(253, 216, 53, 0.25);
+    --primary-inverse: rgba(0, 0, 0, 0.75);
+  }
+}
+
+/* Yellow Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #fdd835;
+  --primary-hover: #ffeb3b;
+  --primary-focus: rgba(253, 216, 53, 0.25);
+  --primary-inverse: rgba(0, 0, 0, 0.75);
+}
+
+/* Yellow (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+}
