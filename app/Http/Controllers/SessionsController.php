@@ -16,6 +16,10 @@ class SessionsController extends Controller
       return back()->withErrors([
         'message' => 'Las credenciales no coinciden.',
       ]);
+    } else {
+      if (auth()->user()->is_admin) {
+        return redirect()->route('admin.index');
+      }
     }
 
     return redirect()->route('home.index');
