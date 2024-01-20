@@ -8,6 +8,8 @@
   <title>@yield('title')</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/orange.css') }}">
+  <script src="https://kit.fontawesome.com/a41d3240c2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
